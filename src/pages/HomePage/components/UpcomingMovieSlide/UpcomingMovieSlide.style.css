@@ -1,0 +1,19 @@
+
+.upcoming-movie-slide {
+  margin: 20px 0;
+}
+
+.upcoming-movie-slide h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.movie-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  padding: 20px;
+}

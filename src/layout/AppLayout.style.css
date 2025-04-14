@@ -1,0 +1,43 @@
+.app-layout {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .navbar-custom {
+    background-color: black !important; 
+    border-bottom: 1px solid #333;
+  }
+  
+  .netflix-logo {
+    width: 120px; 
+  }
+  
+  .navbar-link {
+    color: #e50914 !important;
+    font-weight: bold;
+  }
+  
+  .navbar-link:hover {
+    color: #b81d20 !important;
+  }
+  
+  .search-bar {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+  
+  .search-btn {
+    background-color: #e50914 !important; 
+    color: white; 
+    border: none;
+  }
+  
+  /* 폼 레이아웃 */
+  .form-control {
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 250px;
+  }
+  
