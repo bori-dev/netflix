@@ -3,10 +3,15 @@ import axios from "axios";
 import api from '../../../utils/api';
 
 const fetchUpcomingMovies = async () => {
-  const response = await api.get('/movie/upcoming');
-  console.log("upcomimg", response.data);  
+  try {
+    const response = await api.get('/movie/upcoming');
+    console.log("API Response:", response.data);  
+    return response.data;
+  } catch (error) {
+    console.error("API Error:", error); 
+    throw error;  
+  }
 };
-
 
 const useUpcomingMoviesQuery = () => {
   return useQuery({

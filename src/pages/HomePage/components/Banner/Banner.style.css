@@ -1,17 +1,19 @@
 .banner {
-    height: 56vh;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 70vh;  /* 배너 높이 */
+    background-position: center center;  /* 배경 이미지가 화면의 중앙에 위치하도록 설정 */
+    background-repeat: no-repeat;  /* 배경 이미지가 반복되지 않도록 설정 */
+    background-size: cover;  /* 이미지가 화면을 꽉 채우도록 크기 조정 */
+    margin-bottom: 3em;
+    position: relative;
 }
 
 .banner:before {
     content: '';
-    background: linear-gradient(to top, black, transparent);
     position: absolute;
     left: 0;
-    height: 56vh; 
+    height: 70vh; 
     width: 100%;
+    background: linear-gradient(to top, rgba(54, 13, 13, 0.6), rgba(0, 0, 0, 0));
 }
 
 .banner-text-area {
@@ -26,4 +28,43 @@
 
 .banner-text-area > *{
     z-index: 2;
+}
+
+.movie-slider-title {
+    color: white; /* 텍스트 색상을 흰색으로 강제 설정 */
+    z-index: 2; /* 텍스트가 그라데이션 레이어 위로 오도록 설정 */
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh; 
+    }
+
+    .banner-text-area {
+        width: 100%; 
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .banner-text-area h1 {
+        font-size: 1.5rem; 
+    }
+
+    .banner-text-area p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh;  
+    }
+
+    .banner-text-area h1 {
+        font-size: 1.3rem; 
+    }
+
+    .banner-text-area p {
+        font-size: 0.9rem; 
+    }
 }

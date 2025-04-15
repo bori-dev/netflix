@@ -1,0 +1,21 @@
+.carousel-container {
+    overflow: hidden;
+    height: 440px;
+}
+
+@media (max-width:480px) {
+    .carousel-container {
+        height: 330px;
+        display:flex;
+        justify-content: space-between;
+}
+}
+
+h3 {
+    color: white !important;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;   
+     background: none !important; 
+    text-transform: uppercase; 
+  }

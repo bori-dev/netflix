@@ -3,7 +3,7 @@ import useUpcomingMoviesQuery from '../../Hooks/useUpcomingMovie';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Alert } from 'react-bootstrap';
-import MovieCard from '../MovieCard/MovieCard'; 
+import MovieCard from '../../../../common/MovieCard/MovieCard'; 
 import './UpcomingMovieSlide.style.css';
 
 

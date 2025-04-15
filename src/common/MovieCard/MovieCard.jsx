@@ -1,9 +1,24 @@
 import React from 'react';
-import { Badge } from 'react-bootstrap'; // Badge 임포트
-import { FaStar, FaUsers, FaUserShield } from 'react-icons/fa'; // 적절한 아이콘으로 수정
+import { Badge } from 'react-bootstrap'; 
+import { FaStar, FaUsers, FaUserShield } from 'react-icons/fa'; 
 import './MovieCard.style.css';
+import { useMovieGenreQuery } from '../../pages/HomePage/Hooks/useMovieGenre';
 
 const MovieCard = ({ movie }) => {
+
+  const {data:genreData} = useMovieGenreQuery(); 
+ 
+  const showGenre = (genreIdList) => {
+   if(!genreData) return []
+   const genreNameList = genreIdList.map((id)=> {
+    const genreObj = genreData.find((genre)=>genre.id === id)
+    return genreObj.name; 
+   })
+
+   return genreNameList 
+
+  }
+
   return (
     <div
       style={{
@@ -14,9 +29,9 @@ const MovieCard = ({ movie }) => {
       <div className="overlay">
         <h3>{movie.title}</h3>
         <div className="genre-container">
-          {movie.genre_ids.map((id) => (
-            <Badge key={id} bg="danger" className="genre-badge">
-              {id}
+          {showGenre(movie.genre_ids).map((genre, index) => (
+            <Badge key={index} bg="danger" className="genre-badge">
+              {genre}
             </Badge>
           ))}
         </div>
